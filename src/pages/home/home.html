@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Plan List
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+    <ion-card (click)="actionDetail(item)" *ngFor="let item of PlanList">
+        <img [src]=item.imgUrl />
+        <div class="card-title">{{item.title}}</div>
+        <div class="card-subtitle">{{item.subTitle}}</div>
+    </ion-card>
+    <ion-card class="bottom-add-button">
+        <p>
+            <button ion-button outline icon-start block margin-horizontal (click)='addPlan()'>
+        <ion-icon name='add' is-active="false"></ion-icon>
+        Add Plan
+        </button>
+        </p>
+    </ion-card>
+
+</ion-content>
